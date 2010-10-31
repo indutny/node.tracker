@@ -10,7 +10,7 @@ var encode = exports.encode = function(obj, recursion) {
   if (_type === 'string') {
     return obj.length + ':' + obj
   } else if (_type === 'number') {
-    return 'i' + _obj + 'e';
+    return 'i' + obj + 'e';
   } else if (_type === 'array') {
     var output = [];
     for (var i = 0, len = obj.length; i < len; i++) {
@@ -26,5 +26,5 @@ var encode = exports.encode = function(obj, recursion) {
     return 'd' + output.join('') + 'e';
   }
   
-  return encode(0);
+  return '0:';
 }
